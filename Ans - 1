@@ -1,0 +1,27 @@
+Synchronous and asynchronous are two different modes of operation that describe how tasks or operations are executed and completed in a system or programming environment. The main difference lies in how the tasks are processed and how the program flow is managed.
+
+Synchronous:
+
+1. Blocking: In synchronous operations, a task or operation blocks the execution until it is completed. The program waits for each task to finish before moving on to the next one.
+
+2. Sequential Execution: Synchronous operations are executed in a sequential manner, one after another. The program flow proceeds in a linear fashion, waiting for each task to finish before starting the next one.
+
+3. Single Threaded: Synchronous operations typically run on a single thread. The program executes one task at a time, and other tasks have to wait their turn.
+
+4. Predictable and Deterministic: Synchronous operations have a predictable and deterministic behavior. The order of execution and the time taken for each task can be precisely determined.
+
+Asynchronous:
+
+1. Non-Blocking: In asynchronous operations, a task is initiated and continues its execution without waiting for the task to complete. The program doesn't block and can continue executing other tasks while waiting for the asynchronous task to finish.
+
+2. Concurrent Execution: Asynchronous operations can be executed concurrently or in parallel. Multiple tasks can be initiated and processed simultaneously.
+
+3. Multi-Threaded: Asynchronous operations often involve multiple threads. The program can delegate tasks to separate threads, allowing concurrent execution and improved performance.
+
+4. Event-driven or Callback-based: Asynchronous operations often use event-driven or callback-based mechanisms. Instead of waiting for a task to complete, the program registers a callback function or an event handler that gets invoked when the task finishes.
+
+5. Unpredictable Execution Order: Asynchronous operations may not complete in the order they were initiated. The completion order depends on various factors, including system resources, execution time, and task dependencies.
+
+Asynchronous operations are commonly used in scenarios where tasks may take longer to complete, such as network requests, file I/O operations, or interactions with user interfaces. By executing tasks asynchronously, the program can continue performing other operations or remain responsive while waiting for the asynchronous tasks to finish.
+
+In summary, synchronous operations block the program execution until a task completes, while asynchronous operations allow the program to continue execution and handle task completion through callbacks or events. Asynchronous operations enable concurrency, improve responsiveness, and are commonly used for tasks that involve waiting for external resources or time-consuming operations.
