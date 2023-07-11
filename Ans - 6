@@ -1,0 +1,61 @@
+Promises are objects in JavaScript that represent the eventual completion or failure of an asynchronous operation and allow for more structured and intuitive handling of asynchronous code. They provide a way to manage and coordinate asynchronous operations, making code more readable and maintainable.
+
+Promises have three states:
+
+1. Pending: The initial state when a Promise is created and has not yet been fulfilled or rejected.
+
+2. Fulfilled: The state of a Promise when the asynchronous operation is completed successfully, resulting in a resolved value.
+
+3. Rejected: The state of a Promise when the asynchronous operation encounters an error or is unsuccessful, resulting in a reason for rejection.
+
+Promises have several methods to handle and interact with asynchronous operations. Here are three commonly used methods:
+
+1. `then()`:
+   - The `then()` method is used to handle the successful fulfillment of a Promise.
+   - It takes one or two arguments: a callback function to handle the resolved value, and an optional callback function to handle errors/rejections.
+   - Example:
+     ```javascript
+     fetchData()
+       .then(function(data) {
+         // Handle the resolved value
+       })
+       .catch(function(error) {
+         // Handle errors/rejections
+       });
+     ```
+
+2. `catch()`:
+   - The `catch()` method is used to handle any errors or rejections that occur in the Promise chain.
+   - It takes a single argument: a callback function to handle the rejection reason.
+   - It is typically chained after one or more `then()` methods to handle any potential errors.
+   - Example:
+     ```javascript
+     fetchData()
+       .then(function(data) {
+         // Handle the resolved value
+       })
+       .catch(function(error) {
+         // Handle errors/rejections
+       });
+     ```
+
+3. `finally()`:
+   - The `finally()` method is used to specify a callback function that is always executed regardless of whether the Promise is fulfilled or rejected.
+   - It allows you to perform cleanup tasks or handle common logic that needs to execute regardless of the Promise's outcome.
+   - Example:
+     ```javascript
+     fetchData()
+       .then(function(data) {
+         // Handle the resolved value
+       })
+       .catch(function(error) {
+         // Handle errors/rejections
+       })
+       .finally(function() {
+         // Cleanup or common logic
+       });
+     ```
+
+These three methods, `then()`, `catch()`, and `finally()`, provide a way to handle and respond to the different outcomes of Promises: successful fulfillment, errors/rejections, and common cleanup or logic.
+
+Promises also have additional methods and functionalities, such as `Promise.all()`, `Promise.race()`, and the ability to create new Promises using `Promise.resolve()` and `Promise.reject()`, which further enhance the capabilities of working with asynchronous code in JavaScript.
